@@ -5,9 +5,9 @@ const Footer = () => {
   const { language } = useLanguage();
 
   return (
-    <footer className="bg-[#0A1B3F] text-white font-['Inter'] pt-24 pb-8">
+    <footer className="bg-[#0A1B3F] text-white font-['Inter'] pt-16 md:pt-24 pb-6 md:pb-8">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-24 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 lg:gap-24 mb-12 md:mb-16">
           
           <div>
             <div className="flex items-center mb-8 bg-white p-3 rounded-[2px] w-fit">
@@ -15,7 +15,7 @@ const Footer = () => {
                 <img src="/logo.png" alt="CEBC Logo" className="h-[60px] md:h-[80px] w-auto object-contain" />
               </a>
             </div>
-            <div className="text-gray-400 text-[18px] leading-[1.8]">
+            <div className="text-gray-400 text-[15px] md:text-[18px] leading-[1.8]">
               {language === 'en' ? (
                 <p>We connect people, empower businesses, build lasting relationships and create new opportunities across China and Eurasia.</p>
               ) : (
@@ -28,8 +28,8 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-bold text-[20px] md:text-[22px] mb-6 text-white">{language === 'en' ? 'Quick Links' : '快速链接 Quick Links'}</h4>
-            <ul className="space-y-4 text-gray-400 text-[18px]">
+            <h4 className="font-bold text-[18px] md:text-[22px] mb-5 md:mb-6 text-white">{language === 'en' ? 'Quick Links' : '快速链接 Quick Links'}</h4>
+            <ul className="space-y-3 md:space-y-4 text-gray-400 text-[15px] md:text-[18px]">
               <li><a href="#hero" className="hover:text-[#F1A424] transition-colors">{language === 'en' ? 'Home' : '首页 Home'}</a></li>
               <li><a href="#philosophy" className="hover:text-[#F1A424] transition-colors">{language === 'en' ? 'About Us' : '关于我们 About Us'}</a></li>
               <li><a href="#pricing" className="hover:text-[#F1A424] transition-colors">{language === 'en' ? 'Membership' : '会员服务 Membership'}</a></li>
@@ -39,8 +39,8 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-bold text-[20px] md:text-[22px] mb-6 text-white">{language === 'en' ? 'Contact Us' : '联系我们 Contact Us'}</h4>
-            <ul className="space-y-4 text-gray-400 text-[18px]">
+            <h4 className="font-bold text-[18px] md:text-[22px] mb-5 md:mb-6 text-white">{language === 'en' ? 'Contact Us' : '联系我们 Contact Us'}</h4>
+            <ul className="space-y-3 md:space-y-4 text-gray-400 text-[15px] md:text-[18px]">
               <li><a href="mailto:info@cebc.org" className="hover:text-[#F1A424] transition-colors">info@cebc.org</a></li>
               <li className="pt-2">{language === 'en' ? 'Beijing | Shenzhen' : '北京 Beijing | 深圳 Shenzhen'}</li>
               <li>{language === 'en' ? 'Astana | Tashkent' : '阿斯塔纳 Astana | 塔什干 Tashkent'}</li>
@@ -49,8 +49,8 @@ const Footer = () => {
           
         </div>
         
-        <div className="pt-8 border-t border-gray-800 flex justify-center md:justify-start items-center text-[16px] text-gray-500">
-           <p>© {new Date().getFullYear()} CEBC China-Eurasian Business Council. All rights reserved.</p>
+        <div className="pt-6 md:pt-8 border-t border-gray-800 flex justify-center md:justify-start items-center text-[12px] md:text-[16px] text-gray-500">
+           <p>© {new Date().getFullYear()} CEBC. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -86,7 +86,7 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="pb-24 pt-0 bg-[#F8F9FA] font-['Inter'] relative overflow-hidden" id="benefits">
+    <section className="pb-16 md:pb-24 pt-0 bg-[#F8F9FA] font-['Inter'] relative overflow-hidden" id="benefits">
       
       {/* Decorative subtle mountain background at bottom */}
       <div 
@@ -97,14 +97,14 @@ const Benefits = () => {
       </div>
 
       {/* Header matching the mockup */}
-      <div className="w-full bg-[#0A1B3F] text-white py-16 md:py-20 mb-16 relative z-20 shadow-lg">
+      <div className="w-full bg-[#0A1B3F] text-white py-12 md:py-20 mb-10 md:mb-16 relative z-20 shadow-lg">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex flex-col lg:flex-row lg:justify-between lg:items-end">
           <div className="mb-6 lg:mb-0 flex items-start">
             <div className="mr-6 hidden md:block mt-3">
               <span className="text-[18px] md:text-[24px] font-bold text-white/50">03</span>
             </div>
             <div>
-              <h2 className="text-[52px] md:text-[72px] font-bold text-white leading-tight tracking-tight">
+              <h2 className="text-[36px] md:text-[72px] font-bold text-white leading-tight tracking-tight">
                 {language === 'en' ? 'Membership Benefits' : '会员权益'}
               </h2>
               {language === 'cn' && <h3 className="text-[20px] md:text-[24px] text-white/70 uppercase tracking-widest mt-2">MEMBERSHIP BENEFITS</h3>}
@@ -112,7 +112,7 @@ const Benefits = () => {
           </div>
           
           <div className="lg:text-right border-l-[3px] border-[#F1A424] pl-5 lg:border-l-0 lg:border-r-[3px] lg:pl-0 lg:pr-5">
-            <p className="text-[18px] md:text-[24px] font-medium text-white">
+            <p className="text-[14px] md:text-[24px] font-medium text-white">
               {language === 'en' ? 'More Connections · More Opportunities · Greater Value' : '更多连接 · 更多机会 · 更大价值'}
             </p>
             {language === 'cn' && (
@@ -131,7 +131,7 @@ const Benefits = () => {
           {benefits.map((item) => (
             <div key={item.id} className={`${item.bgClass} flex flex-col overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 min-h-[360px]`}>
               
-              <div className="p-8 md:p-10 flex-grow">
+              <div className="p-6 md:p-10 flex-grow">
                 <div className="flex items-center space-x-4 mb-8">
                   <span className={`text-[28px] md:text-[36px] font-bold ${item.bgClass === 'bg-[#0A1B3F]' ? 'text-white' : 'text-[#F1A424]'}`}>{item.id}</span>
                   <div className={`p-1 ${item.bgClass === 'bg-[#0A1B3F]' ? 'text-white' : 'text-[#0A1B3F]'}`}>
@@ -141,18 +141,18 @@ const Benefits = () => {
                   </div>
                 </div>
                 
-                <h3 className={`text-[22px] md:text-[28px] font-bold ${item.textClass} mb-2 tracking-tight`}>{language === 'en' ? item.titleEn : item.title}</h3>
+                <h3 className={`text-[18px] md:text-[28px] font-bold ${item.textClass} mb-2 tracking-tight`}>{language === 'en' ? item.titleEn : item.title}</h3>
                 {language === 'cn' && <h4 className={`text-[16px] md:text-[18px] ${item.bgClass === 'bg-[#0A1B3F]' ? 'text-gray-300' : 'text-gray-500'} mb-6`}>{item.titleEn}</h4>}
                 {language === 'en' && <div className="h-6"></div>}
                 
-                <p className={`text-[16px] md:text-[18px] ${item.bgClass === 'bg-[#0A1B3F]' ? 'text-gray-300' : 'text-gray-600'} leading-[1.7]`}>
+                <p className={`text-[14px] md:text-[18px] ${item.bgClass === 'bg-[#0A1B3F]' ? 'text-gray-300' : 'text-gray-600'} leading-[1.7]`}>
                   {language === 'en' ? item.descEn : item.desc}
                 </p>
               </div>
 
               {/* Only show image if it exists for the card */}
               {item.image && (
-                <div className="h-[140px] w-full overflow-hidden mt-auto">
+                <div className="h-[140px] md:h-[360px] w-full overflow-hidden mt-auto">
                   <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
                 </div>
               )}

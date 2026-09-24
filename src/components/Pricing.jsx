@@ -5,7 +5,7 @@ const Pricing = () => {
   const { language } = useLanguage();
 
   return (
-    <section className="relative pt-24 pb-16 font-['Inter']" id="pricing">
+    <section className="relative pt-16 md:pt-24 pb-12 md:pb-16 font-['Inter']" id="pricing">
       {/* Background Image - Shared with Application via bg-fixed */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center bg-fixed"
@@ -22,10 +22,10 @@ const Pricing = () => {
             <h3 className="text-[16px] md:text-[20px] font-bold tracking-widest text-[#F1A424] mb-2 uppercase">
               CEBC CORPORATE MEMBERSHIP
             </h3>
-            <h2 className="text-[56px] md:text-[64px] font-bold mb-4 tracking-tight leading-tight">
+            <h2 className="text-[36px] md:text-[64px] font-bold mb-4 tracking-tight leading-tight">
               {language === 'en' ? 'Become a CEBC Corporate Member' : '成为CEBC企业会员'}
             </h2>
-            <p className="text-[20px] md:text-[24px] font-medium mb-6 leading-[1.6] max-w-[700px] text-white/90">
+            <p className="text-[16px] md:text-[24px] font-medium mb-6 leading-[1.6] max-w-[700px] text-white/90">
               {language === 'en' 
                 ? 'Join a trusted business network connecting China and Eurasia and unlock new opportunities.'
                 : <>加入连接中国与欧亚的商业网络，<br/>在更广阔的市场中发现合作机会。</>
@@ -39,7 +39,7 @@ const Pricing = () => {
             )}
 
             {/* 4 Icons grid (horizontal like mockup) */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
               <div>
                 <div className="mb-3 text-[#F1A424]">
                    <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
@@ -92,8 +92,8 @@ const Pricing = () => {
               
               <div className="mb-6 pb-6 border-b border-gray-100">
                 <div className="flex items-baseline text-[#F1A424]">
-                  <span className="text-[28px] font-bold mr-2">RMB</span>
-                  <span className="text-[64px] font-bold tracking-tighter leading-none">9,800</span>
+                  <span className="text-[22px] md:text-[28px] font-bold mr-2">RMB</span>
+                  <span className="text-[48px] md:text-[64px] font-bold tracking-tighter leading-none">9,800</span>
                   <span className="text-[18px] ml-2 text-[#0A1B3F] font-bold">{language === 'en' ? '/ yr' : '/ 年'}</span>
                 </div>
                 {language === 'cn' && <p className="text-[14px] text-gray-400 mt-2">RMB 9,800 / 12 months</p>}

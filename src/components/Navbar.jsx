@@ -4,11 +4,13 @@ import { useLanguage } from '../contexts/LanguageContext';
 const Navbar = () => {
   const { language, setLanguage } = useLanguage();
   const [activeItem, setActiveItem] = useState('membership');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Handle active link state
   const handleNavClick = (e, targetId, itemName) => {
     e.preventDefault();
     setActiveItem(itemName);
+    setIsMobileMenuOpen(false);
     const target = document.getElementById(targetId);
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
@@ -30,13 +32,13 @@ const Navbar = () => {
 
   return (
     <nav className="fixed w-full z-50 bg-white font-['Inter'] shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-        <div className="flex justify-between items-center h-[90px]">
+      <div className="max-w-[1400px] mx-auto px-4 md:px-6 lg:px-12">
+        <div className="flex justify-between items-center h-[70px] md:h-[90px]">
           
           {/* Logo Section */}
           <div className="flex-shrink-0 flex items-center h-full">
             <a href="#hero" onClick={(e) => handleNavClick(e, 'hero', 'home')} className="flex items-center h-full cursor-pointer">
-              <img src="/logo.png" alt="CEBC Logo" className="h-[75px] w-auto object-contain scale-[1.5] origin-left" />
+              <img src="/logo.png" alt="CEBC Logo" className="h-[50px] md:h-[75px] w-auto object-contain md:scale-[1.5] origin-left" />
             </a>
             
             {/* Divider */}
@@ -68,8 +70,8 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Right Section */}
-          <div className="hidden md:flex items-center space-x-6">
+          {/* Right Section — desktop only */}
+          <div className="hidden xl:flex items-center space-x-6">
             
             {/* Language Switch */}
             <div className="flex items-center space-x-2 text-[12px] font-medium">
@@ -96,14 +98,54 @@ const Navbar = () => {
           
           {/* Mobile menu button */}
           <div className="xl:hidden flex items-center">
-            <button className="text-gray-600 focus:outline-none">
+            <button className="text-gray-600 focus:outline-none" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 6h16M4 12h16M4 18h16" />
+                {isMobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 6h16M4 12h16M4 18h16" />
+                )}
               </svg>
             </button>
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      {isMobileMenuOpen && (
+        <div className="xl:hidden bg-white border-t border-gray-100 px-6 py-4 shadow-xl absolute w-full left-0 max-h-[80vh] overflow-y-auto">
+          <div className="flex flex-col space-y-2">
+            {navLinks.map((link) => (
+              <a 
+                key={link.name}
+                href={`#${link.target}`}
+                onClick={(e) => handleNavClick(e, link.target, link.name)}
+                className={`text-[16px] font-medium py-3 border-b border-gray-50 ${activeItem === link.name ? 'text-[#F1A424]' : 'text-[#0A1B3F]'}`}
+              >
+                {language === 'en' ? link.en : link.cn}
+              </a>
+            ))}
+            
+            <div className="pt-4 pb-2 flex items-center space-x-6">
+              <div className="flex items-center space-x-2 text-[14px] font-medium">
+                <button 
+                  className={`${language === 'cn' ? 'text-[#0A1B3F] font-bold' : 'text-gray-400'} transition-colors uppercase`} 
+                  onClick={() => setLanguage('cn')}
+                >
+                  CN
+                </button>
+                <span className="text-gray-300 font-light">|</span>
+                <button 
+                  className={`${language === 'en' ? 'text-[#0A1B3F] font-bold' : 'text-gray-400'} transition-colors uppercase`} 
+                  onClick={() => setLanguage('en')}
+                >
+                  EN
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

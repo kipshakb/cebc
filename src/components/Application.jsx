@@ -45,7 +45,7 @@ const Application = () => {
   }
 
   return (
-    <section className="relative pb-32 pt-16 font-['Inter']" id="application">
+    <section className="relative pb-20 md:pb-32 pt-12 md:pt-16 font-['Inter']" id="application">
       {/* Background Image - Shared with Pricing via bg-fixed */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center bg-fixed"
@@ -55,11 +55,11 @@ const Application = () => {
       </div>
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-16 items-start">
           
           <div className="lg:col-span-4 text-white">
-            <h3 className="text-[42px] font-bold mb-2 tracking-tight">{language === 'en' ? 'Join CEBC' : '加入CEBC'}</h3>
-            <h2 className="text-[42px] font-bold mb-6 tracking-tight leading-tight text-[#F1A424]">{language === 'en' ? 'Unlock New Opportunities' : <>开启更广阔的<br/>合作机会</>}</h2>
+            <h3 className="text-[32px] md:text-[42px] font-bold mb-2 tracking-tight">{language === 'en' ? 'Join CEBC' : '加入CEBC'}</h3>
+            <h2 className="text-[32px] md:text-[42px] font-bold mb-6 tracking-tight leading-tight text-[#F1A424]">{language === 'en' ? 'Unlock New Opportunities' : <>开启更广阔的<br/>合作机会</>}</h2>
             {language === 'cn' && <p className="text-[14px] uppercase tracking-widest mb-10 text-white/80">JOIN CEBC<br/>UNLOCK NEW OPPORTUNITIES</p>}
             {language === 'en' && <div className="mb-10"></div>}
             
@@ -72,11 +72,11 @@ const Application = () => {
           </div>
 
           <div className="lg:col-span-8">
-            <div className="bg-white rounded-[2px] shadow-2xl p-8 md:p-12">
+            <div className="bg-white rounded-[2px] shadow-2xl p-6 md:p-12">
               <div className="flex flex-col md:flex-row justify-between md:items-end mb-10 pb-6 border-b border-gray-100">
                 <div>
                   <h4 className="text-[10px] font-bold tracking-widest text-gray-400 uppercase mb-2">MEMBERSHIP APPLICATION</h4>
-                  <h3 className="text-[32px] font-bold text-[#0A1B3F] tracking-tight">{language === 'en' ? 'Apply for CEBC Membership' : '申请成为CEBC会员'}</h3>
+                  <h3 className="text-[24px] md:text-[32px] font-bold text-[#0A1B3F] tracking-tight">{language === 'en' ? 'Apply for CEBC Membership' : '申请成为CEBC会员'}</h3>
                 </div>
                 <div className="mt-4 md:mt-0 text-left md:text-right">
                   {language === 'cn' && <p className="text-[12px] font-bold text-gray-400 tracking-[0.2em] mb-1">连接 · 赋能 · 共建 · 共创</p>}

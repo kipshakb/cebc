@@ -36,7 +36,7 @@ const Connections = () => {
   ];
 
   return (
-    <section className="py-24 bg-white font-['Inter']" id="connections">
+    <section className="py-16 md:py-24 bg-white font-['Inter']" id="connections">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         
         <div className="flex flex-col lg:flex-row justify-between lg:items-end mb-16">
@@ -46,10 +46,10 @@ const Connections = () => {
             </div>
             <div>
               <div className="h-[2px] w-[30px] bg-[#F1A424] mb-4"></div>
-              <h2 className="text-[52px] md:text-[64px] font-bold text-[#0A1B3F] mb-2 tracking-tight leading-tight">
+              <h2 className="text-[36px] md:text-[64px] font-bold text-[#0A1B3F] mb-2 tracking-tight leading-tight">
                 {language === 'en' ? 'Real Connections Create Real Opportunities' : '真实的连接 带来更多机会'}
               </h2>
-              {language === 'cn' && <p className="text-[20px] md:text-[24px] text-gray-500 font-medium tracking-wide">Real Connections Create Real Opportunities</p>}
+              {language === 'cn' && <p className="text-[16px] md:text-[24px] text-gray-500 font-medium tracking-wide">Real Connections Create Real Opportunities</p>}
             </div>
           </div>
           
@@ -68,15 +68,15 @@ const Connections = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
           {connections.map((item, index) => (
             <div key={index} className="flex flex-col group cursor-pointer">
-              <div className="h-[220px] overflow-hidden mb-6">
+              <div className="h-[180px] md:h-[220px] overflow-hidden mb-4 md:mb-6">
                 <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               
-              <h3 className="text-[20px] md:text-[24px] font-bold text-[#0A1B3F] mb-2">{language === 'en' ? item.titleEn : item.title}</h3>
+              <h3 className="text-[16px] md:text-[24px] font-bold text-[#0A1B3F] mb-2">{language === 'en' ? item.titleEn : item.title}</h3>
               {language === 'cn' && <h4 className="text-[14px] md:text-[16px] text-gray-500 mb-4">{item.titleEn}</h4>}
               {language === 'en' && <div className="mb-4"></div>}
               
-              <p className="text-[16px] md:text-[18px] text-gray-700 leading-[1.7]">
+              <p className="text-[14px] md:text-[18px] text-gray-700 leading-[1.7]">
                 {language === 'en' ? item.descEn : item.desc}
               </p>
             </div>

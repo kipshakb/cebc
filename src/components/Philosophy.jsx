@@ -5,7 +5,7 @@ const Philosophy = () => {
   const { language } = useLanguage();
 
   return (
-    <section className="py-24 bg-white font-['Inter'] relative" id="philosophy">
+    <section className="py-16 md:py-24 bg-white font-['Inter'] relative" id="philosophy">
       {/* Subtle Mountain Background as requested in PDF */}
       <div 
         className="absolute inset-0 z-0 opacity-40 bg-cover bg-bottom"
@@ -23,10 +23,10 @@ const Philosophy = () => {
               <div className="h-[1px] w-8 bg-gray-300"></div>
             </div>
             
-            <h2 className="text-[52px] md:text-[64px] font-bold text-[#0A1B3F] mb-2 tracking-tight leading-[1.1]">
+            <h2 className="text-[36px] md:text-[64px] font-bold text-[#0A1B3F] mb-2 tracking-tight leading-[1.1]">
               {language === 'en' ? 'Our Philosophy' : '我们的理念'}
             </h2>
-            {language === 'cn' && <h3 className="text-[24px] md:text-[28px] font-light text-gray-500 tracking-wide">OUR PHILOSOPHY</h3>}
+            {language === 'cn' && <h3 className="text-[18px] md:text-[28px] font-light text-gray-500 tracking-wide">OUR PHILOSOPHY</h3>}
           </div>
 
           {/* Vertical Divider (Hidden on small screens, shown on md and up) */}
@@ -37,7 +37,7 @@ const Philosophy = () => {
 
           {/* Right Text Section */}
           <div className="flex-1 md:pl-8">
-            <p className="text-[18px] md:text-[22px] font-medium text-[#0A1B3F] mb-4 max-w-2xl leading-[1.6]">
+            <p className="text-[16px] md:text-[22px] font-medium text-[#0A1B3F] mb-4 max-w-2xl leading-[1.6]">
               {language === 'en' 
                 ? 'We connect people, empower businesses, build lasting relationships and create new opportunities across China and Eurasia.'
                 : '以连接为起点，与伙伴共创更大的商业价值。'
@@ -52,22 +52,22 @@ const Philosophy = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center relative">
+        <div className="grid grid-cols-2 md:flex md:flex-row justify-between items-start md:items-center relative gap-y-10">
           
           {/* C - Connect */}
-          <div className="flex flex-col items-center text-center group w-full md:w-1/4 px-4">
+          <div className="flex flex-col items-center text-center group w-full md:w-1/4 px-2 md:px-4">
             <div className="flex items-center justify-center space-x-3 mb-6">
-              <span className="text-[64px] md:text-[80px] font-bold text-[#F1A424] leading-none">C</span>
+              <span className="text-[48px] md:text-[80px] font-bold text-[#F1A424] leading-none">C</span>
               <div className="text-left mt-2">
                 <div className="text-[20px] md:text-[24px] font-bold text-[#0A1B3F]">{language === 'en' ? 'CONNECT' : '连接'}</div>
                 {language === 'cn' && <div className="text-[14px] md:text-[16px] text-gray-500 uppercase tracking-widest mt-0.5">CONNECT</div>}
               </div>
             </div>
-            <div className="w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-full overflow-hidden mb-8 shadow-[0_10px_30px_rgba(0,0,0,0.1)] relative">
+            <div className="w-[140px] h-[140px] md:w-[220px] md:h-[220px] rounded-full overflow-hidden mb-8 shadow-[0_10px_30px_rgba(0,0,0,0.1)] relative">
               <img src="/images/1-1.jpeg" alt="Connect" className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700" />
             </div>
-            <h4 className="font-bold text-[18px] md:text-[20px] text-[#0A1B3F] mb-2">{language === 'en' ? 'Connect with the right people' : '连接关键人物与资源'}</h4>
-            {language === 'cn' && <p className="text-[14px] md:text-[16px] text-gray-500 leading-[1.5]">Connect with<br/>the right people</p>}
+            <h4 className="font-bold text-[14px] md:text-[20px] text-[#0A1B3F] mb-2">{language === 'en' ? 'Connect with the right people' : '连接关键人物与资源'}</h4>
+            {language === 'cn' && <p className="text-[11px] md:text-[16px] text-gray-500 leading-[1.5]">Connect with<br/>the right people</p>}
           </div>
 
           <div className="hidden md:block text-gray-300">
@@ -75,19 +75,19 @@ const Philosophy = () => {
           </div>
 
           {/* E - Empower */}
-          <div className="flex flex-col items-center text-center group w-full md:w-1/4 px-4 mt-12 md:mt-0">
+          <div className="flex flex-col items-center text-center group w-full md:w-1/4 px-2 md:px-4">
             <div className="flex items-center justify-center space-x-3 mb-6">
-              <span className="text-[64px] md:text-[80px] font-bold text-[#F1A424] leading-none">E</span>
+              <span className="text-[48px] md:text-[80px] font-bold text-[#F1A424] leading-none">E</span>
               <div className="text-left mt-2">
                 <div className="text-[20px] md:text-[24px] font-bold text-[#0A1B3F]">{language === 'en' ? 'EMPOWER' : '赋能'}</div>
                 {language === 'cn' && <div className="text-[14px] md:text-[16px] text-gray-500 uppercase tracking-widest mt-0.5">EMPOWER</div>}
               </div>
             </div>
-            <div className="w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-full overflow-hidden mb-8 shadow-[0_10px_30px_rgba(0,0,0,0.1)] relative">
+            <div className="w-[140px] h-[140px] md:w-[220px] md:h-[220px] rounded-full overflow-hidden mb-8 shadow-[0_10px_30px_rgba(0,0,0,0.1)] relative">
               <img src="/images/1-2.jpeg" alt="Empower" className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700" />
             </div>
-            <h4 className="font-bold text-[18px] md:text-[20px] text-[#0A1B3F] mb-2">{language === 'en' ? 'Empower your business with local access' : '获取市场洞察与支持'}</h4>
-            {language === 'cn' && <p className="text-[14px] md:text-[16px] text-gray-500 leading-[1.5]">Empower your business<br/>with local access</p>}
+            <h4 className="font-bold text-[14px] md:text-[20px] text-[#0A1B3F] mb-2">{language === 'en' ? 'Empower your business with local access' : '获取市场洞察与支持'}</h4>
+            {language === 'cn' && <p className="text-[11px] md:text-[16px] text-gray-500 leading-[1.5]">Empower your business<br/>with local access</p>}
           </div>
 
           <div className="hidden md:block text-gray-300">
@@ -95,19 +95,19 @@ const Philosophy = () => {
           </div>
 
           {/* B - Build */}
-          <div className="flex flex-col items-center text-center group w-full md:w-1/4 px-4 mt-12 md:mt-0">
+          <div className="flex flex-col items-center text-center group w-full md:w-1/4 px-2 md:px-4">
             <div className="flex items-center justify-center space-x-3 mb-6">
-              <span className="text-[64px] md:text-[80px] font-bold text-[#F1A424] leading-none">B</span>
+              <span className="text-[48px] md:text-[80px] font-bold text-[#F1A424] leading-none">B</span>
               <div className="text-left mt-2">
                 <div className="text-[20px] md:text-[24px] font-bold text-[#0A1B3F]">{language === 'en' ? 'BUILD' : '共建'}</div>
                 {language === 'cn' && <div className="text-[14px] md:text-[16px] text-gray-500 uppercase tracking-widest mt-0.5">BUILD</div>}
               </div>
             </div>
-            <div className="w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-full overflow-hidden mb-8 shadow-[0_10px_30px_rgba(0,0,0,0.1)] relative">
+            <div className="w-[140px] h-[140px] md:w-[220px] md:h-[220px] rounded-full overflow-hidden mb-8 shadow-[0_10px_30px_rgba(0,0,0,0.1)] relative">
               <img src="/images/1-3.jpeg" alt="Build" className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700" />
             </div>
-            <h4 className="font-bold text-[18px] md:text-[20px] text-[#0A1B3F] mb-2">{language === 'en' ? 'Build long-term relationships' : '建立长期合作关系'}</h4>
-            {language === 'cn' && <p className="text-[14px] md:text-[16px] text-gray-500 leading-[1.5]">Build long-term<br/>relationships</p>}
+            <h4 className="font-bold text-[14px] md:text-[20px] text-[#0A1B3F] mb-2">{language === 'en' ? 'Build long-term relationships' : '建立长期合作关系'}</h4>
+            {language === 'cn' && <p className="text-[11px] md:text-[16px] text-gray-500 leading-[1.5]">Build long-term<br/>relationships</p>}
           </div>
 
           <div className="hidden md:block text-gray-300">
@@ -115,25 +115,25 @@ const Philosophy = () => {
           </div>
 
           {/* C - Create */}
-          <div className="flex flex-col items-center text-center group w-full md:w-1/4 px-4 mt-12 md:mt-0">
+          <div className="flex flex-col items-center text-center group w-full md:w-1/4 px-2 md:px-4">
             <div className="flex items-center justify-center space-x-3 mb-6">
-              <span className="text-[64px] md:text-[80px] font-bold text-[#F1A424] leading-none">C</span>
+              <span className="text-[48px] md:text-[80px] font-bold text-[#F1A424] leading-none">C</span>
               <div className="text-left mt-2">
                 <div className="text-[20px] md:text-[24px] font-bold text-[#0A1B3F]">{language === 'en' ? 'CREATE' : '共创'}</div>
                 {language === 'cn' && <div className="text-[14px] md:text-[16px] text-gray-500 uppercase tracking-widest mt-0.5">CREATE</div>}
               </div>
             </div>
-            <div className="w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-full overflow-hidden mb-8 shadow-[0_10px_30px_rgba(0,0,0,0.1)] relative">
+            <div className="w-[140px] h-[140px] md:w-[220px] md:h-[220px] rounded-full overflow-hidden mb-8 shadow-[0_10px_30px_rgba(0,0,0,0.1)] relative">
               <img src="/images/1-4.jpeg" alt="Create" className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700" />
             </div>
-            <h4 className="font-bold text-[18px] md:text-[20px] text-[#0A1B3F] mb-2">{language === 'en' ? 'Create new opportunities together' : '共同创造商业机会'}</h4>
-            {language === 'cn' && <p className="text-[14px] md:text-[16px] text-gray-500 leading-[1.5]">Create new<br/>opportunities together</p>}
+            <h4 className="font-bold text-[14px] md:text-[20px] text-[#0A1B3F] mb-2">{language === 'en' ? 'Create new opportunities together' : '共同创造商业机会'}</h4>
+            {language === 'cn' && <p className="text-[11px] md:text-[16px] text-gray-500 leading-[1.5]">Create new<br/>opportunities together</p>}
           </div>
 
         </div>
 
         {/* Footer line */}
-        <div className="text-center mt-24">
+        <div className="text-center mt-16 md:mt-24">
           <p className="text-[14px] md:text-[18px] tracking-[0.2em] text-[#0A1B3F] font-bold opacity-80 uppercase">
             WE CONNECT. EMPOWER. BUILD. CREATE.
           </p>
