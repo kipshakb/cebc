@@ -4,8 +4,8 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Philosophy from './components/Philosophy';
 import Benefits from './components/Benefits';
-import Connections from './components/Connections';
-import WhyJoin from './components/WhyJoin';
+import ChineseCompanies from './components/ChineseCompanies';
+import EurasianCooperation from './components/EurasianCooperation';
 import Pricing from './components/Pricing';
 import Application from './components/Application';
 import Footer from './components/Footer';
@@ -15,12 +15,12 @@ function App() {
     <LanguageProvider>
       <div className="min-h-screen bg-white">
         <Navbar />
-        <div className="pt-20"> {/* Padding for fixed navbar */}
+        <div> {/* Padding handled by sections or scroll-padding */}
           <Hero />
           <Philosophy />
+          <ChineseCompanies />
+          <EurasianCooperation />
           <Benefits />
-          <Connections />
-          <WhyJoin />
           <Pricing />
           <Application />
           <Footer />

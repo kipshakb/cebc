@@ -22,11 +22,9 @@ const Navbar = () => {
   const navLinks = [
     { name: 'home', cn: '首页', en: 'Home', target: 'hero' },
     { name: 'about', cn: '关于我们', en: 'About Us', target: 'philosophy' },
-    { name: 'chinese', cn: '中国企业', en: 'Chinese Companies', target: 'pricing' },
-    { name: 'eurasia', cn: '欧亚合作', en: 'Eurasian Cooperation', target: 'connections' },
-    { name: 'membership', cn: '会员服务', en: 'Membership', target: 'pricing' },
-    { name: 'activities', cn: '活动', en: 'Activities', target: 'connections' },
-    { name: 'insights', cn: '洞察', en: 'Insights', target: 'whyjoin' },
+    { name: 'chinese', cn: '中国企业', en: 'Chinese Companies', target: 'chinese-companies' },
+    { name: 'eurasia', cn: '欧亚合作', en: 'Eurasian Cooperation', target: 'eurasian-cooperation' },
+    { name: 'membership', cn: '会员服务', en: 'Membership', target: 'benefits' },
     { name: 'contact', cn: '联系我们', en: 'Contact Us', target: 'application' }
   ];
 
