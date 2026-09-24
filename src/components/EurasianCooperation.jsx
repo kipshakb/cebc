@@ -26,32 +26,32 @@ const EurasianCooperation = () => {
     { 
       name: '2026 SCO Business Council Annual Meeting', 
       shortName: 'SCO 2026', 
-      logo: '' 
+      logo: '/images/SCO_logo-01.png' 
     },
     { 
       name: 'World Nomad Games (2024)', 
       shortName: 'WNG 2024', 
-      logo: '' 
+      logo: '/images/wng%20logo.png' 
     },
     { 
       name: 'RES 2026 Astana', 
       shortName: 'RES 2026', 
-      logo: '' 
+      logo: '/images/res.png' 
     },
     { 
       name: 'GLA Global Logistics Conference', 
       shortName: 'GLA 2025', 
-      logo: '' 
+      logo: '/images/gla.png' 
     },
     { 
       name: 'C5+1 Business Forum', 
       shortName: 'C5+1', 
-      logo: '' 
+      logo: '/images/c5+1.png' 
     },
     { 
       name: 'GDTE (Guangzhou)', 
       shortName: 'GDTE', 
-      logo: '' 
+      logo: '/images/gdte.png' 
     },
   ];
 
@@ -197,21 +197,21 @@ const EurasianCooperation = () => {
           </div>
           
           {/* Logo container slots — Clean ready frames for partner logos (No emojis!) */}
-          <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-4 w-full">
+          <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8 w-full">
             {partners.map((partner, index) => (
               <div key={index} className="flex flex-col items-center justify-start text-center group">
                 
-                {/* Logo Frame Container */}
-                <div className="w-full h-[68px] md:h-[78px] bg-white border border-gray-200/90 rounded-sm shadow-sm hover:shadow-md hover:border-[#D98200] flex items-center justify-center p-3 transition-all duration-300 group/logo">
+                {/* Logo Container */}
+                <div className="w-full h-[80px] md:h-[100px] flex items-center justify-center p-2 transition-transform duration-300 group-hover:scale-105">
                   {partner.logo ? (
                     <img 
                       src={partner.logo} 
                       alt={partner.name} 
-                      className="max-h-[46px] max-w-full object-contain filter grayscale group-hover/logo:grayscale-0 transition-all duration-300" 
+                      className="max-h-[70px] md:max-h-[90px] max-w-full object-contain" 
                     />
                   ) : (
                     <div className="flex flex-col items-center justify-center text-center">
-                      <span className="text-[13px] md:text-[15px] font-black tracking-wider text-[#0A1B3F] group-hover/logo:text-[#D98200] transition-colors uppercase">
+                      <span className="text-[13px] md:text-[15px] font-black tracking-wider text-[#0A1B3F] transition-colors uppercase group-hover:text-[#D98200]">
                         {partner.shortName}
                       </span>
                       <span className="text-[9px] text-gray-500 uppercase tracking-widest font-extrabold mt-0.5">
@@ -222,7 +222,7 @@ const EurasianCooperation = () => {
                 </div>
 
                 {/* Event / Partner Label */}
-                <p className="text-[12px] md:text-[13px] font-extrabold text-gray-900 group-hover:text-[#0A1B3F] transition-colors leading-[1.3] mt-2.5 text-center">
+                <p className="text-[12px] md:text-[13px] font-extrabold text-gray-900 group-hover:text-[#D98200] transition-colors leading-[1.3] mt-3 text-center">
                   {partner.name}
                 </p>
               </div>
