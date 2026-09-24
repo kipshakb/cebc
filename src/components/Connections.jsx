@@ -10,28 +10,28 @@ const Connections = () => {
       titleEn: "Government & Business Meetings",
       desc: "对接政府机构、行业协会、重要企业，促进务实合作。",
       descEn: "Engage with government bodies, industry associations and leading companies to advance practical cooperation.",
-      image: "https://images.unsplash.com/photo-1558402529-d2638a7023e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/images/3-1.png"
     },
     {
       title: "商务代表团",
       titleEn: "Business Delegations",
       desc: "组织企业考察、商务访问和定制化对接活动。",
       descEn: "Organize tailored business delegations, company visits and matchmaking programs.",
-      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/images/3-2.png"
     },
     {
       title: "行业论坛与展会",
       titleEn: "Industry Events & Exhibitions",
       desc: "汇聚行业领袖、专家学者和企业，分享趋势，创造合作机遇。",
       descEn: "Bring together industry leaders, experts and companies to share insights and create new opportunities.",
-      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/images/3-3.png"
     },
     {
       title: "企业与项目访问",
       titleEn: "Company & Project Visits",
       desc: "深入企业与项目现场，了解实际需求，推动解决方案落地。",
       descEn: "Visit companies and project sites to understand real needs and facilitate solutions.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/images/3-4.jpeg"
     }
   ];
 
@@ -41,24 +41,24 @@ const Connections = () => {
         
         <div className="flex flex-col lg:flex-row justify-between lg:items-end mb-16">
           <div className="flex items-start mb-6 lg:mb-0">
-            <div className="mr-6 hidden md:block mt-1">
-              <span className="text-[12px] font-bold text-gray-400">04</span>
+            <div className="mr-6 hidden md:block mt-3">
+              <span className="text-[16px] md:text-[20px] font-bold text-gray-400">04</span>
             </div>
             <div>
               <div className="h-[2px] w-[30px] bg-[#F1A424] mb-4"></div>
-              <h2 className="text-[42px] font-bold text-[#0A1B3F] mb-1 tracking-tight leading-tight">
+              <h2 className="text-[52px] md:text-[64px] font-bold text-[#0A1B3F] mb-2 tracking-tight leading-tight">
                 {language === 'en' ? 'Real Connections Create Real Opportunities' : '真实的连接 带来更多机会'}
               </h2>
-              {language === 'cn' && <p className="text-[14px] text-[#0A1B3F] font-medium tracking-wide">Real Connections Create Real Opportunities</p>}
+              {language === 'cn' && <p className="text-[20px] md:text-[24px] text-gray-500 font-medium tracking-wide">Real Connections Create Real Opportunities</p>}
             </div>
           </div>
           
-          <div className="lg:text-right border-l-[2px] border-[#F1A424] pl-4 lg:border-l-0 lg:border-r-[2px] lg:pl-0 lg:pr-4">
-            <p className="text-[14px] font-medium text-[#0A1B3F]">
+          <div className="lg:text-right border-l-[3px] border-[#F1A424] pl-5 lg:border-l-0 lg:border-r-[3px] lg:pl-0 lg:pr-5">
+            <p className="text-[18px] md:text-[22px] font-medium text-[#0A1B3F]">
               {language === 'en' ? 'Turning connections into real outcomes.' : '通过务实的合作，推动更多项目落地。'}
             </p>
             {language === 'cn' && (
-              <p className="text-[10px] text-gray-500 mt-1">
+              <p className="text-[14px] md:text-[16px] text-gray-500 mt-2">
                 Turning connections into real outcomes.
               </p>
             )}
@@ -72,11 +72,11 @@ const Connections = () => {
                 <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               
-              <h3 className="text-[16px] font-bold text-[#0A1B3F] mb-1">{language === 'en' ? item.titleEn : item.title}</h3>
-              {language === 'cn' && <h4 className="text-[12px] text-gray-500 mb-4">{item.titleEn}</h4>}
+              <h3 className="text-[20px] md:text-[24px] font-bold text-[#0A1B3F] mb-2">{language === 'en' ? item.titleEn : item.title}</h3>
+              {language === 'cn' && <h4 className="text-[14px] md:text-[16px] text-gray-500 mb-4">{item.titleEn}</h4>}
               {language === 'en' && <div className="mb-4"></div>}
               
-              <p className="text-[13px] text-gray-700 leading-[1.6]">
+              <p className="text-[16px] md:text-[18px] text-gray-700 leading-[1.7]">
                 {language === 'en' ? item.descEn : item.desc}
               </p>
             </div>
