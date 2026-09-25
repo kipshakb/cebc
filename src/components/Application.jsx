@@ -21,9 +21,28 @@ const Application = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitted(true);
+
+    try {
+      // Send raw data to our backend endpoint
+      const response = await fetch('/api/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        alert(language === 'en' ? 'Failed to submit application. Please try again.' : 'Ошибка при отправке заявки. Пожалуйста, попробуйте еще раз.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert(language === 'en' ? 'An error occurred. Please try again later.' : 'Произошла ошибка. Пожалуйста, попробуйте позже.');
+    }
   };
 
   if (isSubmitted) {
@@ -144,7 +163,7 @@ const Application = () => {
                   <div>
                     <label className="block text-[13px] font-bold text-[#0A1B3F] mb-2">{language === 'en' ? 'Company Website' : '公司网站'}</label>
                     <input 
-                      type="url" 
+                      type="text" 
                       name="website" 
                       placeholder={language === 'en' ? 'Enter company website' : '请输入公司网站'}
                       className="w-full px-4 py-3 bg-white border border-gray-200 rounded-[2px] focus:outline-none focus:ring-1 focus:ring-[#0A1B3F] focus:border-[#0A1B3F] transition-colors text-[14px]"
@@ -180,6 +199,7 @@ const Application = () => {
                       defaultValue={[]}
                     >
                       <option value="" disabled>{language === 'en' ? 'Select Markets' : '请选择关注市场'}</option>
+                      <option value="china">{language === 'en' ? 'China' : '中国 (China)'}</option>
                       <option value="kazakhstan">{language === 'en' ? 'Kazakhstan' : '哈萨克斯坦 (Kazakhstan)'}</option>
                       <option value="uzbekistan">{language === 'en' ? 'Uzbekistan' : '乌兹别克斯坦 (Uzbekistan)'}</option>
                       <option value="kyrgyzstan">{language === 'en' ? 'Kyrgyzstan' : '吉尔吉斯斯坦 (Kyrgyzstan)'}</option>
